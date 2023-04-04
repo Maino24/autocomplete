@@ -53,3 +53,62 @@ function removeElements(){
         item.remove();
     });
 }
+
+
+/* ------  sezione provincie --------- */
+
+var xhttpP = new XMLHttpRequest;
+let inputProvincie = document.getElementById('inputP');
+let itemProvincie = [];
+
+xhttpP.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+        var responseP = JSON.parse(xhttpP.responseText);
+
+        var provincie = responseP.provincie;
+
+        for(let i = 0; i < provincie.length; i++){
+            /*item += `<li id="regioniItem">${regioni[i].nome} </li>`*/
+            itemProvincie.push(provincie[i].nome)
+        }
+
+        /*document.getElementById('regioni').innerHTML = item;*/
+        console.log(itemProvincie);
+    }
+};
+
+xhttpP.open("GET", "data/provincie.json", true);
+xhttpP.send();
+
+let sortedProvincie = itemProvincie;
+
+inputProvincie.addEventListener("keyup", (e) =>{
+    
+    removeElementsP();
+
+    for(let i of sortedProvincie) {
+        if(i.toLowerCase().startsWith(inputProvincie.value.toLowerCase()) && inputProvincie.value !=""){
+            let listItemP = document.createElement("li");
+            listItemP.classList.add("listP-items");
+            listItemP.style.cursor = "pointer";
+            listItemP.setAttribute("onclick", "displayProvincie('" + i + "')");
+
+            let wordP = "<b>" + i.substr(0, inputProvincie.value.length) + "</b>";
+            wordP += i.substr(inputProvincie.value.length);
+            listItemP.innerHTML = wordP;
+            document.querySelector(".listP").appendChild(listItemP);
+        }
+    }
+});
+
+function displayProvincie (value){
+    inputProvincie.value = value;
+}
+
+
+function removeElementsP(){
+    let itemsProvincie = document.querySelectorAll(".listP-items");
+    itemsProvincie.forEach((itemProvincie)=>{
+        itemProvincie.remove();
+    });
+}
