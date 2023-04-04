@@ -25,7 +25,7 @@ let sortedRegioni = item;
 
 input.addEventListener("keyup", (e) =>{
     
-
+    
 
     for(let i of sortedRegioni) {
         if(i.toLowerCase().startWith(input.ariaValueMax.toLowerCase()) && input.value !=""){
@@ -40,4 +40,8 @@ input.addEventListener("keyup", (e) =>{
             document.querySelector(".list").appendChild(listItem);
         }
     }
-})
+});
+
+function displayRegioni (value){
+    input.value = value;
+}
