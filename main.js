@@ -28,7 +28,7 @@ input.addEventListener("keyup", (e) =>{
     removeElements();
 
     for(let i of sortedRegioni) {
-        if(i.toLowerCase().startWith(input.ariaValueMax.toLowerCase()) && input.value !=""){
+        if(i.toLowerCase().startsWith(input.value.toLowerCase()) && input.value !=""){
             let listItem = document.createElement("li");
             listItem.classList.add("list-items");
             listItem.style.cursor = "pointer";
