@@ -1,5 +1,6 @@
 var xhttp = new XMLHttpRequest;
 let input = document.getElementById('input');
+let item = [];
 
 xhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
@@ -8,10 +9,12 @@ xhttp.onreadystatechange = function(){
         var regioni = response.regioni;
 
         for(let i = 0; i < regioni.length; i++){
-            item += `<li id="regioniItem">${regioni[i].nome} </li>`
+            /*item += `<li id="regioniItem">${regioni[i].nome} </li>`*/
+            item.push(regioni[i].nome)
         }
 
-        document.getElementById('regioni').innerHTML = item;
+        /*document.getElementById('regioni').innerHTML = item;*/
+        console.log(item);
     }
 };
 
