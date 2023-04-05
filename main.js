@@ -21,7 +21,7 @@ xhttp.onreadystatechange = function(){
 xhttp.open("GET", "data/regioni.json", true);
 xhttp.send();
 
-let sortedRegioni = item;
+let sortedRegioni = item.sort();
 
 input.addEventListener("keyup", (e) =>{
     
@@ -44,13 +44,15 @@ input.addEventListener("keyup", (e) =>{
 
 function displayRegioni (value){
     input.value = value;
+    removeElements();
 }
 
 
 function removeElements(){
     let items = document.querySelectorAll(".list-items");
-    items.forEach((item)=>{
+    items.forEach((item) => {
         item.remove();
+        
     });
 }
 
@@ -112,3 +114,5 @@ function removeElementsP(){
         itemProvincie.remove();
     });
 }
+
+
