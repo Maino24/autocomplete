@@ -70,11 +70,9 @@ xhttpP.onreadystatechange = function(){
         var provincie = responseP.provincie;
 
         for(let i = 0; i < provincie.length; i++){
-            /*item += `<li id="regioniItem">${regioni[i].nome} </li>`*/
             itemProvincie.push(provincie[i].nome)
         }
 
-        /*document.getElementById('regioni').innerHTML = item;*/
         console.log(itemProvincie);
     }
 };
