@@ -105,6 +105,7 @@ inputProvincie.addEventListener("keyup", (e) =>{
 
 function displayProvincie (value){
     inputProvincie.value = value;
+    removeElementsP();
 }
 
 
