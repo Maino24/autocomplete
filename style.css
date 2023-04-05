@@ -9,23 +9,27 @@ body{
     background-image: url("./img/400645.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1{
     text-align: center;
     padding-bottom: 10px;
     color: white;
-    text-shadow: 4px 4px 4px #000000;
+    text-shadow: 5px 5px 5px #000000;
 }
+
 
 .formR{
     width: 40%;
     height: 40%;
-    position: absolute;
+    /*position: absolute;
     transform: translate(-50%, -50%);
     top: 30%;
-    left: 50%;
+    left: 50%;*/
     padding: 40px 0;
     color: black;
 }
@@ -63,21 +67,22 @@ li{
 .formP{
     width: 40%;
     height: 100%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 90%;
-    left: 50%;
+    /*position: absolute;
+    transform: translate(-50%, -50%);*/
     padding: 40px 0;
 }
 
-@media screen and (max-width:480px){
-    
-    h1{
+
+
+
+/* ------ Media-query tablet -------- */
+@media screen and (min-width:481px) and (max-width:850px){
+    /*h1{
         text-align: center;
         color: white;
-        text-shadow: 4px 4px 4px #000000;
-        font-size: 1rem;
-    }
+        text-shadow: 5px 5px 5px #000000;
+        font-size: 2rem;
+    }*/
 
     body{
         height: 100vh;
@@ -85,5 +90,63 @@ li{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+    }
+
+    .formR{
+        width: 60%;
+        height: 40%;
+        /*position: absolute;
+        transform: translate(-50%, -50%);
+        top: 30%;
+        left: 50%;*/
+        padding: 40px 0;
+        color: black;
+    }
+
+    .formP{
+        width: 60%;
+        height: 100%;
+        /*position: absolute;
+        transform: translate(-50%, -50%);*/
+        padding: 40px 0;
+    }
+}
+
+
+/* ------ Media-query mobile -------- */
+@media screen and (max-width:480px){
+    
+    /*h1{
+        text-align: center;
+        color: white;
+        text-shadow: 5px 5px 5px #000000;
+        font-size: 1rem;
+    }*/
+
+    body{
+        height: 100vh;
+        background-image: url("./img/400645.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .formR{
+        width: 60%;
+        height: 40%;
+        /*position: absolute;
+        transform: translate(-50%, -50%);
+        top: 30%;
+        left: 50%;*/
+        padding: 40px 0;
+        color: black;
+    }
+
+    .formP{
+        width: 60%;
+        height: 100%;
+        /*position: absolute;
+        transform: translate(-50%, -50%);*/
+        padding: 40px 0;
     }
 }
