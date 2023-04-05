@@ -9,10 +9,12 @@ body{
     background-image: url("./img/400645.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     margin: auto;
     flex-direction: column;
     align-items: center;
+
 }
 
 h1{
@@ -84,31 +86,12 @@ li{
         font-size: 2rem;
     }*/
 
-    body{
-        height: 100vh;
-        background-image: url("./img/400645.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
     .formR{
         width: 60%;
-        height: 40%;
-        /*position: absolute;
-        transform: translate(-50%, -50%);
-        top: 30%;
-        left: 50%;*/
-        padding: 40px 0;
-        color: black;
     }
 
     .formP{
         width: 60%;
-        height: 100%;
-        /*position: absolute;
-        transform: translate(-50%, -50%);*/
-        padding: 40px 0;
     }
 }
 
@@ -123,30 +106,12 @@ li{
         font-size: 1rem;
     }*/
 
-    body{
-        height: 100vh;
-        background-image: url("./img/400645.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
 
     .formR{
         width: 60%;
-        height: 40%;
-        /*position: absolute;
-        transform: translate(-50%, -50%);
-        top: 30%;
-        left: 50%;*/
-        padding: 40px 0;
-        color: black;
     }
 
     .formP{
         width: 60%;
-        height: 100%;
-        /*position: absolute;
-        transform: translate(-50%, -50%);*/
-        padding: 40px 0;
     }
 }
